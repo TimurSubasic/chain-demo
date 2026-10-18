@@ -1,0 +1,14 @@
+scopes:
+  source:
+    manual:
+
+queue_rules:
+  - name: default
+    batch_size: 5
+
+pull_request_rules:
+  - name: chain-demo auto-queue on open
+    conditions:
+      - base=main
+    actions:
+      queue:
